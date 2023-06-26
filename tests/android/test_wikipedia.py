@@ -10,6 +10,11 @@ from mobile_tests_lesson_13.model import app
 def test_check_for_search_resuls_1():
     app.given_opened()
 
+    allure.dynamic.tag("web тест проверка  ")
+    print("ok ok ok")
+    allure.dynamic.tag("web тест проверка  ")
+    print("ok ok ok")
+
     with step('Search for content'):
         browser.element((AppiumBy.ACCESSIBILITY_ID, 'Search Wikipedia')).click()
         browser.element((AppiumBy.ID, 'org.wikipedia.alpha:id/search_src_text')).type('BrowserStack')
