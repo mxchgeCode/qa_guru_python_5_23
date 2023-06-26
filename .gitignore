@@ -11,3 +11,4 @@ browserstack_sample.py
 /allure/
 /config.test.env.browserstack.example
 /config.personal.env.example
+/mobile_tests_lesson_13/utils/selene/

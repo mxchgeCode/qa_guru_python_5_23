@@ -55,7 +55,7 @@ def _by(selector: str | Tuple[str, str]):
 original_browser_element = Browser.element
 
 
-@monkey.patch_method_in(Browser)
+# @monkey.patch_method_in(Browser)
 def element(self, selector: Union[str, tuple]) -> Element:
     return original_browser_element(self, _by(selector))
 
@@ -63,7 +63,7 @@ def element(self, selector: Union[str, tuple]) -> Element:
 original_browser_all = Browser.all
 
 
-@monkey.patch_method_in(Browser)
+# @monkey.patch_method_in(Browser)
 def all(self, selector: Union[str, tuple]) -> Collection:
     return original_browser_all(self, _by(selector))
 
@@ -71,7 +71,7 @@ def all(self, selector: Union[str, tuple]) -> Collection:
 original_element_element = Element.element
 
 
-@monkey.patch_method_in(Element)
+# @monkey.patch_method_in(Element)
 def element(self, selector: Union[str, tuple]) -> Element:
     return original_element_element(self, _by(selector))
 
@@ -79,6 +79,6 @@ def element(self, selector: Union[str, tuple]) -> Element:
 original_element_all = Element.all
 
 
-@monkey.patch_method_in(Element)
+# @monkey.patch_method_in(Element)
 def all(self, selector: Union[str, tuple]) -> Collection:
     return original_element_all(self, _by(selector))

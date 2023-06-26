@@ -6,12 +6,12 @@ from selene.core.entity import Element
 from mobile_tests_lesson_13.utils.python import monkey
 
 
-@monkey.patch_method_in(Element)
+# @monkey.patch_method_in(Element)
 def tap(self: Element) -> Element:
     return self.click()
 
 
-@monkey.patch_method_in(Element)
+# @monkey.patch_method_in(Element)
 def long_press(self: Element, duration=1.0) -> Element:
     from selenium.webdriver import ActionChains
     from selenium.webdriver.common.actions import interaction
